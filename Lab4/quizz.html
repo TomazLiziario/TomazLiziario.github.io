@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quizz</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>A minha Cidade</h1>
+ 
+            <nav>
+                 <a href="index.html">Home</a>
+                 <a href="info.html">Informação</a>
+                 <a href="multimedia.html">Multimedia</a>
+                 <a href="local.html">Localização</a>
+                 <a href="quizz.html">Quizz</a>
+                 <a href="viagens.html">Viagens</a>
+             </nav>
+ 
+            <img src="images/Almada.webp" alt="Almada">
+        </header>
+
+        <main>
+            <h2>Quizz sobre Almada</h2>
+            <form method="get" action="https://postman-echo.com/get">
+                <fieldset>
+                    <label for="nome">Nome:</label> 
+                    <input type="text" name="nome" placeholder="insira o seu nome">
+
+                    <label for="apelido">Apelido:</label> 
+                    <input type="text" name="apelido" placeholder="insira o seu apelido">
+
+                    <label for="email">Email:</label> 
+                    <input type="email" name="email" placeholder="insira um email">
+                </fieldset>
+
+                <fieldset>
+                    <label for="monumento">1. Qual o monumento mais famoso de Almada?</label><br>
+                    <input type="radio" name="monumento" value="Torre de Belém"> Torre de Belém<br>
+                    <input type="radio" name="monumento" value="Cristo Rei" required> Cristo Rei<br>
+                    <input type="radio" name="monumento" value="Padrão dos Descobrimentos"> Padrão dos Descobrimentos<br>
+                    <input type="radio" name="monumento" value="Mosteiro dos Jerónimos"> Mosteiro dos Jerónimos<br><br>
+                </fieldset>
+
+                <fieldset>
+                    <label for="praia">2. Qual é a praia mais conhecida de Almada?</label>
+                    <select id="praia" name="praia" required>
+                    <option value="Costa da Caparica">Costa da Caparica</option>
+                    <option value="Praia do Meco">Praia do Meco</option>
+                    <option value="Praia da Figueirinha">Praia da Figueirinha</option>
+                    <option value="Praia da Adraga">Praia da Adraga</option>
+                    </select><br><br>
+                </fieldset>
+
+                <fieldset>
+                    <label for="margem">3. Almada está localizada em que margem do rio Tejo?</label><br>
+                    <input type="radio" name="margem" value="Norte"> Margem Norte<br>
+                    <input type="radio" name="margem" value="Sul" required> Margem Sul<br><br>
+                </fieldset>
+
+                <fieldset>
+                    <label for="altitude">4. Qual a altitude aproximada do Cristo Rei? (0-200 metros)</label>
+                    <input type="range" id="altitude" name="altitude" min="0" max="200" step="1"><br><br>
+                </fieldset>
+
+                <fieldset>
+                    <label for="bairro">5. Qual destes bairros é conhecido pelo desenvolvimento artístico de Almada?</label><br>
+                    <input type="text" id="bairro" name="bairro" list="bairros" placeholder="Escolha um bairro" required>
+                    <datalist id="bairros">
+                    <option value="Cacilhas">
+                    <option value="Pragal">
+                    <option value="Trafaria">
+                    <option value="Monte de Caparica">
+                    </datalist><br><br>
+                </fieldset>
+
+                <fieldset>
+                    <label for="populacao">6. Qual é a população aproximada de Almada?</label>
+                    <input type="number" id="populacao" name="populacao" min="90000" max="300000" step="10000" required><br><br>
+                </fieldset>
+
+                <fieldset>
+                    <label for="inauguracao">7. Em que ano foi inaugurado o Cristo Rei?</label>
+                    <input type="date" id="inauguracao" name="inauguracao" required><br><br>
+                </fieldset>
+
+                <fieldset>
+                    <label for="ponte">8. Qual é o nome da ponte que liga Almada a Lisboa?</label>
+                    <select id="ponte" name="ponte" required>
+                    <option value="Ponte 25 de Abril">Ponte 25 de Abril</option>
+                    <option value="Ponte Vasco da Gama">Ponte Vasco da Gama</option>
+                    </select><br><br>
+                </fieldset>
+
+                <fieldset>
+                    <label for="rio">9. Que rio separa Almada de Lisboa?</label><br>
+                    <textarea id="rio" name="rio" rows="2" cols="30" placeholder="Escreva aqui..." maxlength="50" required></textarea><br><br>
+                </fieldset>
+
+                <fieldset>
+                    <label for="concelho">10. Escolha o concelho ao qual Almada pertence:</label><br>
+                    <select id="concelho" name="concelho" required>
+                    <option value="Setúbal">Setúbal</option>
+                    <option value="Lisboa">Lisboa</option>
+                    <option value="Cascais">Cascais</option>
+                    <option value="Sintra">Sintra</option>
+                    </select><br><br>
+
+                    <label for="favcolor">Escolha uma presente no brasão de Almada:</label><br>
+                    <input type="color" id="favcolor" name="favcolor"><br><br>
+                </fieldset>
+
+                <input type="submit">
+            </form>
+        </main>
+
+        <footer>
+            <p>DIW 2024</p>
+            <p>Tomás Liziário ULHT</p>
+        </footer>
+    </body>
+</html>
